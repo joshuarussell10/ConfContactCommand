@@ -1,42 +1,14 @@
-<mat-toolbar class="toolbar mat-elevation-z2">
-  <mat-toolbar-row>
-    <a class="logo-link"><div class="logo-text">Lingo Command</div></a>
-    <div class="toolbar-spacer"></div>
-    <div fxShow fxHide.gt-sm>
-      <button mat-icon-button aria-label="Menu" [matMenuTriggerFor]="menu">
-        <mat-icon>menu</mat-icon>
-      </button>
-      <mat-menu #menu="matMenu">
-        <button uiSref="events" mat-menu-item>
-          Events
-        </button>
-        <button uiSref="contacts" mat-menu-item>
-          Contacts
-        </button>
-      </mat-menu>
-    </div>
-    <div fxHide fxShow.gt-sm>
-      <button uiSref="events" uiSrefActive="active" mat-stroked-button>
-        Events
-      </button>
-      <button uiSref="contacts" uiSrefActive="active" mat-stroked-button>
-        Contacts
-      </button>
-    </div>
-  </mat-toolbar-row>
-</mat-toolbar>
-<mat-drawer-container class="example-container" autosize>
-  <mat-drawer #drawer class="example-sidenav" mode="side">
-    <p>Auto-resizing sidenav</p>
-    <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p>
-    <button (click)="showFiller = !showFiller" mat-raised-button>
-      Toggle extra text
-    </button>
+<div id="top-nav">
+  <app-top-nav></app-top-nav>
+</div>
+<mat-drawer-container id="main-container" autosize>
+  <mat-drawer opened #drawer id="left-nav" mode="side" fxLayout="row">
+    <app-left-nav></app-left-nav>
   </mat-drawer>
-
-  <div class="example-sidenav-content">
-    <button type="button" mat-button (click)="drawer.toggle()">
-      Toggle sidenav
-    </button>
+  <div>
+    <div (click)="drawer.toggle()" id="left-nav-toggle">
+      <mat-icon class="mat-elevation-z1">keyboard_arrow_left</mat-icon>
+    </div>
+    <ui-view></ui-view>
   </div>
 </mat-drawer-container>

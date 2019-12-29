@@ -1,0 +1,25 @@
+.toolbar {
+  background-color: #24292e;
+  color: #fff;
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.logo-container mat-icon {
+  background-color: #eee;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  font-size: 30px;
+  padding: 7px;
+  margin-left: -6px;
+  margin-right: 12px;
+  color: #518658;
+}
+
+.logo-container .logo-text {
+  line-height: 44px;
+}

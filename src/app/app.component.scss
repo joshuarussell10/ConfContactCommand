@@ -1,8 +1,23 @@
-.example-container {
+#main-container {
   height: calc(100vh - 64px);
   background-color: transparent;
 }
 
-.example-sidenav {
-  background-color: rgba(0, 255, 255, 0.2);
+#left-nav {
+  background-color: rgba(133, 187, 101, 1);
+}
+
+#left-nav-toggle {
+  position: absolute;
+  bottom: 7px;
+}
+
+#left-nav-toggle mat-icon {
+  background-color: #ddd;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+  font-size: 30px;
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
 }

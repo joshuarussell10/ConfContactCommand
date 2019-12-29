@@ -1,0 +1,24 @@
+.nav-description {
+  min-width: 140px;
+  margin: auto;
+  text-transform: uppercase;
+  line-height: 22px;
+}
+
+.mat-icon {
+  font-size: 30px;
+  width: 30px;
+  line-height: 24px;
+  padding: 15px;
+}
+
+.left-nav-item:hover {
+  cursor: pointer;
+  color: #b5f78f;
+  background-color: #84af6b;
+  box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2);
+}
+
+.left-nav-item:hover .mat-icon {
+  text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.2);
+}

@@ -1,0 +1,24 @@
+<div fxLayout="row" uiSref="dashboard" class="left-nav-item">
+  <div>
+    <mat-icon>web</mat-icon>
+  </div>
+  <div *ngIf="showNavDescription" class="nav-description">
+    dashboard
+  </div>
+</div>
+
+<div fxLayout="row" uiSref="clients" class="left-nav-item">
+  <div>
+    <mat-icon>supervised_user_circle</mat-icon>
+  </div>
+  <div *ngIf="showNavDescription" class="nav-description">
+    clients
+  </div>
+</div>
+
+<div fxLayout="row" style="position: absolute; bottom: 0;right: 0;">
+  <div>
+    <mat-icon *ngIf="showNavDescription" (click)="showNavDescription = !showNavDescription">more_horiz</mat-icon>
+    <mat-icon *ngIf="!showNavDescription" (click)="showNavDescription = !showNavDescription">more_vert</mat-icon>
+  </div>
+</div>
